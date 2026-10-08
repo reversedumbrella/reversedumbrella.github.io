@@ -1,334 +1,396 @@
-<head>
+<html>
+    <head>
+        <script>
+            function toggle(elem)
+            {
+                sec=elem.parentElement;
+                coll=sec.getElementsByClassName("hiddenBloco")[0];
+                if(coll.style.height!='auto') coll.style.height='auto'; else coll.style.height='0px';
+            }
+        </script>
+      	<title>
+      	Hugo Loureiro de Almeida
+      	</title>
+        <style>
+            body{background-color: rgb(14, 23, 43); 
+                font-family: 'Courier New', Courier, monospace; color:rgb(14, 23, 43)}
 
-    <title>
-        Hugo Loureiro de Almeida
-    </title>   
-    <style>
-        h2{
-            padding-left: 10px;
-        }
-        h4{
-            padding-left:10px;
-        }
-        body{
-            background-color: rgb(95, 85, 75);
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .bloco{
-            background-color: rgb(220, 168, 64);
-            margin: 3px;
-            padding-top: 5px;
-            margin: 5px;
-            margin-left:0px;
-            border-radius: 8px;
-            
-        }
-        .subBloco{
-            background-color: rgb(237, 210, 113);
-            padding: 5px;
-            margin: 5px;
-            margin-left:0px;
-            border-radius: 8px;
-        }
-        .flexBloco{
-            display: flex;
-            overflow-x: scroll;
-        }
-        .peça{
-            background-color: rgb(255, 240, 200);
-            padding: 5px;
-            margin:3px;
-            border-radius: 8px;
-            
-            min-height: 160px;
-            min-width: none;
+            button{background-color: rgb(237, 210, 113); width:100%; border: hidden; margin: 0px 0px 0px 0px; 
+                font-family: 'Courier New', Courier, monospace; color:rgb(17,42,99);}
+            button:hover{font-family: 'Courier New', Courier, monospace; color:rgb(44, 121, 189); font-weight: bolder;}
 
-        }
-        .txtScroll{
-            overflow-y: scroll;
-            max-height: 1200;
-            border-style: solid;
-        }
-        .youtube{
-            width: 420;
-            height: 315;
-        }
-        .youtube_16_9{
-            width: 560;
-            height: 315;
-        }
-        .imagemW{
-            width: 420;
-        }
-        .imagemWS{
-            width: 320;
-        }
-        .imagemH{
-            height: 315;
-            width: auto;
-        }
-    </style> 
-</head>
+            h2{padding-left: 10px; font-family: 'Courier New', Courier, monospace;}
+            h3{padding-left: 20px; padding-top: 5px; font-family: 'Courier New', Courier, monospace;}
+            h4{padding-left: 10px; font-family: 'Courier New', Courier, monospace;}
 
-<body>
-    <div class="bloco">
-        <h4>Hugo Loureiro de Almeida | (+351) 912 417 939 | hugoloureirodealmeida@gmail.com</h4>
-    </div>
-    <div class="bloco">
-        <h2>ARTE</h2>
-        <div class="subBloco">
-                <h4>ANIMAÇÃO</h4>
-                <div class = "flexBloco">
-                    <div>
-                        <div class = "peça">
-                            <p>O Feiticeiro da Fruta - rotoscopia</p>
-                            <iframe class="youtube" src="https://www.youtube.com/embed/zFVnetA4Wis"></iframe>
-                        </div>
-                        <div class = "peça">
-                            <p>O Ovo - Projeto Final aula animação 2D. </p>
-                            <iframe class="youtube" src="https://www.youtube.com/embed/5fkhOyBYWRg"></iframe>
-                        </div>
-                        <div class = "peça">
-                            <p>Cubefari - Projeto Final aula animação 3D.  </p>
-                            <iframe class="youtube" src="https://www.youtube.com/embed/j3mx6UmLPzs"></iframe>
-                        </div>
-                    </div>
-                
-                    <div class = "peça">
-                        <p>Outras Animações</p>
-                        <img class="imagemW" src="https://drive.google.com/thumbnail?id=10l3TdZ9YP1TUaUi5yPT-LtatPRCPbCCS&sz=w600">
-                        <img class="imagemW" src="https://drive.google.com/thumbnail?id=1c-UrTf9fnqbXDniH59KkFdfoe_ieKkvR&sz=w600">
-                        <img class="imagemW" src="https://drive.google.com/thumbnail?id=16bEv3nnNQWhSqHpO3mWN5WbFLT3toJJH&sz=w600">
-                    </div>
+            .bloco{background-color: rgb(220, 168, 64); 
+                width: 80%; margin:0% 10% 1% 10%;padding-top:5px; padding-bottom:20px; border-radius:8px;}
+            .headBloco{background-color: rgb(207, 141, 47); 
+                width: 98%; margin:0% 1% 1% 1%;padding-top:5px; padding-bottom:2px; border-radius:8px;}
+            .subBloco{
+                background-color:rgb(237, 210, 113); 
+                padding:5px; margin:8px; border-radius:8px;}
+            .hiddenBloco{display: inline-block; height:0px; overflow: hidden;}
+            .flexBloco{display: flex;}
+            .gridBloco{display: inline-grid; width:100%; grid-template-columns: auto auto auto auto auto; grid-auto-flow:dense}
+            .inlineBloco{display: inline}
+            div.sticky {
+                position: sticky;
+                top: -60;
+            }
+            .peça{
+                background-color: rgb(255, 240, 200); 
+                padding:5px; margin:3px; border-radius:8px;}
+            .peça_33{
+                background-color: rgb(255, 240, 200); 
+                width:33%; padding:5px; margin:3px; border-radius:8px;}
+            .imagemHead{height:480px; display:block; margin:5px auto 5px auto;}
+            .imagemW_100{max-width: 100%}
+            .imagemW_50{width: 49%; max-width: 49%;}
+            .imagemW_33{width: 32%; max-width: 32%;}
+            .animation{width:100%; height: auto;}
 
-                    <div class = "peça">
-                        <p>Odisseia Cósmica</p>
-                        <div class = "txtScroll">
-                            <img src="https://drive.google.com/thumbnail?id=1bEYRPLzyXe6IidVY2kdJVL9tS9WnGVLy&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1vb-ljCsJP4b6Yg9yffLJQuBjpNFPBFY1&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1dSJJ-hcCsc0lj2y_fJLBL99vlrJhCyZ6&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1FI7WTvpxyjftr1hpL9ujxNq1zKCPyWqW&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1lZY0RAKoo_0bQuzaQMIN8cQjGcN9jQZG&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1Bzdy8sx1Cbqd2bMDCwayoj3lelmAldPw&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1l54smNmeqiHT3hRxfk4ZnCzixiluvLge&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1_Mbm3aZgn3qQnGYOo2lYNxT5sLbeBWDB&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=18mOXiP8Wihh70ZKBZ4AA4tgt7Ucut2qM&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1YUWVtiQpXehfFq4jSi0K0yeNF8UrBHJz&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1bKo5DbxVzYOTgF-rzZ1nKyGPl95HXhCa&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1vBHGpUs7aBDK6oblvE4LuCouND-QV7ml&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1i5u9p5Hln7SEIVjk4wG3CSP5XHM1tGWC&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1K-MMSr4qVwLFpZTXF86Gb0cbJrgbVPl0&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1aYuWZCK3WRXBGFio-Db1Orx6i7dvEQu3&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1jVy3b4i9xBsCCkVcMzco4NwZFVsDikVh&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1ICrUkn18nmOkO3Z7QE8URHumARq-hHI4&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=17GQI2XVUpiX2S6wIZJDykpdeKnrC491n&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1O8IEBx1SSFfG0-t54T2UwG02Qvq58crr&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=19sLjFpRCC_QazVDikQgxfFbtDLARIMkr&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1x7VOCY3gTxFxCTJpk9GcdWkPFbdOZ4w9&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1tA-7PgK62DCx-RXQJQvHI7ThpS8pUe2y&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=12nch9neiFMbH7m61-miUsTYo4WgmLYU0&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1-Pyh48uibbmhleQ8UtWzoOSu3iVLTo58&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1VMWdquNL5qSatLM3lX9ylFQNK7f4YGac&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=12OWhvHduAtbsFgF34BJG5a9nqxyWa4GN&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1YKuNh_EbTr5YVdEEFuGWk3tMSrVmMddJ&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1CadKQf8zh7jOYj9g8wDB64Gs8YCe4Wvk&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1cQJn3REBnhLeGBNzC9uunByn8JM0MAl4&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1frixAO6ec1y1GkSXHjz-b2pQaBCOV86l&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1DKS2_Re7aozYe50RwGSTiNZG3pVuZgNZ&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1KagOtVjUyrHJcFpozb5Qt4pI1s8ZLQk3&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1ohBBcqSq-taqOldPmkks1TomqHB4iuLn&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1Tg-nIqsyw6NkaX2nscZsbhOmvzuRwvT-&sz=w600">
-                            <img src="https://drive.google.com/thumbnail?id=1qtqbQQsaRsRYQnFmICJPYDnZhJTOOAhW&sz=w600">
-                        </div>
-                    </div>
+            a{font-weight: bold; color:rgb(17,42,99); text-align: center;}
+
+            a:link {text-decoration: none;}
+            a:visited {text-decoration: none;}
+            a:hover {text-decoration: none;}
+            a:active {text-decoration: none;}
+        </style>
+    </head>
+    <body>
+        <div class="sticky"> 
+            <div class="headBloco" id="top">
+                <h4>Hugo Loureiro de Almeida | hugoloureirodealmeida@gmail.com</h4>
+                <div class="gridBloco">
+                    <a class="subBloco" href="#animation">ANIMAÇÕES</a>
+                    <a class="subBloco" href="#preproduction">PRÉ-PRODUÇÃO</a>
+                    <a class="subBloco" href="#illustration">ILUSTRAÇÕES</a>
+                    <a class="subBloco" href="#programing">PROGRAMAÇÃO</a>
+                    <a class="subBloco" href="#about">SOBRE MIM</a>
                 </div>
-            </div>   
-            <div class = "subBloco">
-                <h4>DESENHOS</h4>
-                <div class = "flexBloco" >
-                    <div>
-                        <div class="peça">
-                            <p>Ashenzari the shackled</p>
-                            <img class="imagemW" src="https://drive.google.com/thumbnail?id=1hrsrGlEooaOKT8GAHYy6cl4bctbYUiF6&sz=w600">
-                        </div>
-                        <div class="peça">
-                            <p></p>
-                            <img class="imagemW" src="https://drive.google.com/thumbnail?id=1Wzc8JYaJEsKj1UGja4c7Bcw48kHrJpXh&sz=w600">                
-                        </div>
-                        <div class="peça">
-                            <p>Nossa Senhora da Imaculada Conceição</p>
-                            <img class="imagemW" src="https://drive.google.com/thumbnail?id=12i1I9vzGhnrR9JIxskjyx1ldGKERxsvM&sz=w600">                
-                        </div>
-                         <div class="peça">
-                            <img class="imagemW" src="https://drive.google.com/thumbnail?id=1-l_B4EW4QtIhk14Xp9Lfym_Yi4yvZIGu&sz=w600">
-                        </div>
+            </div>
+        </div>
+      
+        <div class="bloco" id="animation"> 
+          	<iframe class="imagemHead" width="830" height="480" src="https://player.vimeo.com/video/1232586339?h=0b081447a9" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+
+            <div class="subBloco">
+                <button type="button" class="collapsible" onclick="toggle(this);">
+                    <h2>Animações</h2>
+                </button>
+
+                <div class="hiddenBloco">
+                    <h4>Curta-Metragens</h4>
+
+                    <div class="peça">
+                        <video class="animation" controls>
+                            <source src="animation/entrega_Animao_06_24.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video> 
+                        <h3>Paralaxe</h3>
                     </div>
-                    <div>
-                        <div class="peça">
-                            <img class="imagemWS" src="https://drive.google.com/thumbnail?id=1o3yTipXcSJeuv6f--saxFGcp7Z_9aYs8&sz=w600">
-                        </div>
-                        <div class="peça">
-                            <img class="imagemWS" src="https://drive.google.com/thumbnail?id=1aZXOT4kdzjGbB5ON4DAPamFjC1U12Fj7&sz=w600">
-                        </div>
-                        <div class="peça">
-                            <img class="imagemWS" src="https://drive.google.com/thumbnail?id=1YjGh4sxYAZp-d9YTELEhenDfEpG5W9wo&sz=w600">
-                        </div>
+                    <div class="peça">
+                        <video class="animation" controls>
+                            <source src="animation/monstrac1p1_c2p1_v2.mp4" type="video/mp4">
+                          
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Tidal Shift - Roughs</h3>
+                    </div>
+                    <div class="peça">
+                        <video class="animation" controls>
+                            <source src="animation/cubefari.mp4" type="video/mp4">
+                          
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Cubefari</h3>
+                    </div>
+                    <div class="peça">
+                        <video class="animation" controls>
+                            <source src="animation/Ovo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>O Ovo</h3>
+                    </div>
+                    <div class="peça">
+                        <video class="animation" controls>
+                            <source src="animation/fruta.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>O Feiticeiro da Fruta</h3>
+                    </div>
+
+                    <h4>Exercicios</h4>
+                    <div class="flexBloco">
+                      <div style="width:50%">
+                        <div class="peça"><video class="animation" autoplay loop><source src="animation/ex_jumping_repeat.mp4" type="video/mp4"></video></div>
+                        <div class="peça"><video class="animation" autoplay loop><source src="animation/ex_acc_dec_uni.mp4" type="video/mp4"></video></div>
+                      </div>
+                      <div style="width:50%">
+                        <div class="peça"><video class="animation" autoplay loop><source src="animation/ex_walkcycle_5_repeat.mp4" type="video/mp4"></video></div>
+                        <div class="peça"><video class="animation" autoplay loop><source src="animation/ex_bouncingball__repeat.mp4" type="video/mp4"></video></div>
+                      </div>
                     </div>
                 </div>
             </div>
-    </div>
-    <div class="bloco">
-        <h2>PROGRAMAÇÃO</h2>
-        <div class="subBloco">
-            <h4>PROCESSING</h4>
+        </div>
+				
+      	<div class="bloco" id="preproduction">
+            <h2>PRÉ-PRODUÇÃO</h2>
+            <div class="subBloco" style="width:60%; margin: auto; margin-bottom: 5px;">
+                <img class="imagemW_100" src="preproduction/paralaxe/style_9.png">
 
-            <a href="https://processing.org">[Processing]</a>
-            é uma linguagem de programação criada para servir como caderno de rascunho digital.
-            <div class="flexBloco">
-                <div class="peça">
-                    <h4>Color cube</h3>
-                    <p>Color Cube deconstrói uma imagem nas suas cores e reorganiza-as num espaço 3D representativo do espaço de cor RGB</p>
+                <button type="button" class="collapsible" onclick="toggle(this);">
+                    <h2>PARALAXE</h2>
+                </button>
+
+                <div class="hiddenBloco">
+                    <div class="peça" style="width:90%; margin: auto; height:90%; overflow: hidden; overflow-y: scroll;">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-01.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-02.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-03.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/argumento_v2-1.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/argumento_v2-2.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/charreference.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-07.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-08.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-09.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-10.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-11.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-12.png">
+                        <img class="imagemW_100" src="preproduction/paralaxe/dossier_Paralaxe-13.png">
+                    </div>
+                </div>
+            </div>
+            <div class="subBloco" style="width:60%; margin: auto;">
+                <img class="imagemW_100" src="preproduction/cosmica/imageheader.jpg">
+
+                <button type="button" class="collapsible" onclick="toggle(this);">
+                    <h2>ODISSEIA CÓSMICA</h2>
+                </button>
+
+                <div class="hiddenBloco">
+                    <div class="peça" style="width:90%; margin: auto; height:90%; overflow: hidden; overflow-y: scroll;">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-01.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-02.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-03.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-04.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-05.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-06.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-07.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-08.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-09.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-10.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-11.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-12.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-13.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-14.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-15.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-16.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-17.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-18.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-19.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-20.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-21.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-22.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-23.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-24.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-25.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-26.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-27.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-28.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-29.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-30.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-31.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-32.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-33.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-34.png">
+                        <img class="imagemW_100" src="preproduction/cosmica/preproduo_hugoAlmeida-35.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="bloco" id="illustration">
+            <img class="imagemHead" src="illustration/DCSSashenzari.png">
+
+            <div class="subBloco">
+                <button type="button" class="collapsible" onclick="toggle(this);">
+                    <h2>Ilustrações</h2>
+                </button>
+
+                <div class="hiddenBloco">
+                    <div class="flexBloco">
+                        <div style="width:50%"> 
+                            <div class="peça"><img class = "imagemW_100" src="illustration/DCSSashenzari.png"></div>  
+                            <div class="peça"><img class = "imagemW_100" src="illustration/nossasenhoradaimaculadaconceicaofinal.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/mp100terubeautyinthebeholder.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/DCbartnMax.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/FoFi_Q_4.png"></div>
+                        </div>
+                        <div style="width:50%"> 
+                            <div class="peça"><img class = "imagemW_100" src="illustration/sonhadora2.png"></div>  
+                            <div class="peça"><img class = "imagemW_100" src="illustration/mp100terumobkisspainting.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/mp100blackholemob.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/DCthadnCRAYDLv2.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/petunia.png"></div>
+                        </div>
+                    </div>
+                    <div class="flexBloco">
+                        <div style="width:33%">
+                            <div class="peça"><img class = "imagemW_100" src="illustration/dinosaurio.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/petunia2.png"></div>
+                        </div>
+                        <div style="width:33%">
+                            <div class="peça"><img class = "imagemW_100" src="illustration/amalgamlazurite.png"></div>
+                        </div>
+                        <div style="width:33%">
+                            <div class="peça"><img class = "imagemW_100" src="illustration/wizardking.png"></div>
+                            <div class="peça"><img class = "imagemW_100" src="illustration/mp100mob1-Cpia.png"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="bloco" id="programing">
+            <img class="imagemHead" src="programing/3d_2.webp">
+            <h2>PROGRAMAÇÃO</h2>
+            <div class="subBloco">
+                <button type="button" class="collapsible" onclick="toggle(this);">
+                    <h4>OPEN FRAMEWORKS - A MÁQUINA DO MUNDO</h4>
+                </button>
+
+                <div class="hiddenBloco">
+                    <a href="https://openframeworks.cc">[OpenFrameworks]</a> 
+                    é um toolkit Open-Source para C++ criado para ajudar no processo criativo, oferecendo um framework simples e intuitivo.
+                
+                    <div class="peça">
+                        <h4>A Máquina do Mundo</h4>
+                        <p>A Máquina do Mundo é um gerador e simulador de mundos virtuais, onde populações evoluem de acordo com os recursos naturais presentes.</p>
+                        <img class="imagemW_100" src="programing/mapa.png">
+                        <p>Este projeto foi desenvolvido como Projeto Final para Licenciatura de Som e Imagem da Universidade Catolica do Porto. Como tal, vai se encontrar exposto dias 11, 12 e 13 de setembro de 2025 no Panorama#25</p>
+                    </div>
+
+                    <div class="peça">
+                        <h4>Graficos</h4>
+                        <p>A Máquina do Mundo combina 229 simbolos com 43 cores para gerar todos os seus conteúdos gráficos.</p>
+                        <img width="140" src="programing/graphTiles.png">
+                        <img width="140" src="programing/graphCores.png">
+                        <p>Cada um dos simbolos é composto por pixeis pretos, cinzento escuros, cinzento claros e brancos. Estes são substituidos por qualquer combinação de quatro cores:</p>
+                        <img width="300" src="programing/graphExample.png">
+                    </div>
+
+                    <div class="peça">
+                        <h4>Mapa</h4>
+                        <p>O programa gera um mapa composto por informação sobre o ambiente - altitude, temperatura, humidade - e estruturas - cidades, estradas. <br> O mapa tem 192 unidades de comprimento por 160 undades de largura, com cada unidade de área a ser representada por um simbolo ASCII.</p>
+                        <p>A geração do mapa passa por várias etapas:</p>
+                        <ol>
+                            <li>Rios</li>
+                            <li>Terreno</li>
+                            <li>Temperatura</li>
+                            <li>Humidade</li>
+                            <li>Biomas</li>
+                        </ol>
+                    </div>
+
+                    <div class="peça">
+                        <h4>Rios e Terreno</h4>
+                        <p>A geração de terreno começa com a geração de rios e a partir destes rios é gerado o declive do terreno.</p> 
+                        <p>1. N pontos de origem são escolhidos, e, a partir destes, N gráficos Árvore são gerados.</p>
+                        <img width="300" src="programing/river1.png">
+                        <p>2. Para cada ponto no mapa, descobre-se qual a linha dos gráficos árvore mais próxima.</p>
+                        <img width="300" src="programing/river3.png">
+                        <p>3. A altitude para cada ponto do mapa é gerada. Os pontos de origem são considerados como o fundo de oceanos, e a altitude aumenta à medida que nos afastamos destes, garantindo um terreno onde rios avançam sempre para altitudes de menor elevação.</p>
+                        <img width="300" src="programing/river4.png">
+                        <p>4. Para finalizar, qualquer ponto no mapa com altitude inferior ou superior a valores predeterminados é considerado oceano ou montanha, respetivamente:</p>
+                        <img class="imagemW_100" src="programing/river5.png">
+                    </div>
+
+                    <div class="peça">
+                        <h4>Temperatura, Humidade e Biomas</h4>
+                        <p>O programa gera um mapa de temperatura. O programa gera um mapa de ventos a partir da altitude.</p>
+                        <p>A partir do mapa de ventos e humidade, o programa simula o transporte de humidade a partir do oceano, criando um mapa de humidade.</p>
+                        <img class="imagemW_50" src="programing/mapaTemp.png">
+                        <img class="imagemW_50" src="programing/mapaHumid.png">
+                        <p>Temperatura e Humidade são combinados para determinar biomas segundo uma versão modificada do modelo de Robert Whittaker:</p>
+                        <img class="imagemW_100" src="programing/biome_graph.png">
+                    </div>
+
+                    <div class="peça">
+                        <h4>Estradas</h4>
+                        <p>A geração de estradas utiliza uma versão modificada do "Dijkstra's algorithm". Devido ao tamanho do mapa (192 x 160), o algoritmo é utilizado duas vezes.</p><p>Para uma aparencia mais natural, o algoritmo procura que a estrada mantenha sempre a mesma altitude em cada um dos seus pontos, circulando à volta de montanhas e corpos de água.</p>
+                        <p>As imagens seguintes são as etapas de teste do algoritmo, num mapa com 256x256 de tamanho. A luminoside em cada ponto representa a sua altitude.</p> 
+                        <p>A primeira etapa analiza o mapa reduzido para 32x32 (64:1). Neste teste, a área vermelha indica a área analisada e  a área amarela indica o caminho encontrado.</p>
+                        <p>A segunda etapa regressa ao mapa de 256x256, mas apenas analisa o caminho descoberto na etapa anterior. A área verde indica a área analisada na segunda etapa e a área azul representa o caminho encontrado</p>
+                        <img class="imagemW_50" src="programing/didi1.png">
+                        <img class="imagemW_50" src="programing/didi3.png">
+                    </div>
+
+                    <div class="peça">
+                        <h4>Estrutura Fisica</h4>
+                        <p>
+                            A estrutura fisica da Máquina do Mundo é composta pelos seus elementos técnicos: 
+                            um monitor e um computador - incluido teclado e rato - e uma estrutura de madeira para os suportar. 
+                            Esta estrutura foi planeada e construida de acordo com o material disponibilizado pela universidade. 
+                        </p>
+                        <img class="imagemW_50" src="programing/table3.jpg">
+                        <img class="imagemW_50" src="programing/table4.jpg">
+                        <p>De forma a invocar mapas numa mesa, o monitor encontra-se horizontal.</p>
+                        <img class="imagemW_50" src="programing/table1.png">
+                        <img class="imagemW_50" src="programing/table2.jpg">
+                    </div>  
+                </div>
+            </div>
+            <div class="subBloco">
+                <button type="button" class="collapsible" onclick="toggle(this);">
+                    <h4>PROCESSING</h4>
+                </button>
+                
+                <div class="hiddenBloco">
+                    <a href="https://processing.org">[Processing]</a>
+                    é uma linguagem de programação criada para servir como caderno de rascunho digital.
+
+                    <div class="peça">
+                        <h4>Color cube</h4>
+                        <p>Color Cube deconstrói uma imagem nas suas cores e reorganiza-as num espaço 3D representativo do espaço de cor RGB</p>
                         
-                    <img width="510" src="https://drive.google.com/thumbnail?id=16d2q7AmJ1_8lNGcpPAjmEwU4YgmlhKG_&sz=w600">
-                    <p>Desenvolvimento de uma versão do programa mais user-friendly foi iniciado após conversas com um possivel cliente. o Projeto foi abandonado após o cliente cessar comunicação.</p>
-                    <img width="510" src="https://drive.google.com/thumbnail?id=1nbQULr0QB9shUch97RHW61pE6wTjW9Ld&sz=w600">
-                    <p>A aplicação poderia alterar entre o cubo RGB e um cone HSL</p>
-                    <img width="160" src="https://drive.google.com/thumbnail?id=128xDX9dFdUQDec3fZtmJTyi22ktUNUb6&sz=w600">
-                    <img width="160" src="https://drive.google.com/thumbnail?id=1NfNjvE6XbG4H_sjE_K3FFcBfOrs2Gw-_&sz=w600">
-                    <img width="160" src="https://drive.google.com/thumbnail?id=1K5DTZO9MGwHUYtyK9OYu2IUgOS9F6h32&sz=w600">       
-                </div>
-                <div class="peça">
-                    <h4>Solar Insolation</h4>
-                    <p>Irradiação solar é a quantidade de radiação solar por unidade de área</p>
-                    <p>Este programa simula a evolução da irradiação solar diária ao longo de um ano</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1P7ASAQFZoo1mXjwPremp_0S86Nd0Funt&sz=w600">
-                    <p>O programa tem várias configurações, como por exemplo, como seria a irradiação solar se um lado do planeta estivesse sempre virado para o sol.</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1U-OBBQ9P7zxRkPVT6sWuSeKKPpvZil7u&sz=w600">
-                </div>
-                <div class="peça">
-                    <h4>Pixel Game</h4>
-                    <iframe class="youtube" src="https://www.youtube.com/embed/cImYbHPrCis"></iframe>
-                    <p>
-                        Desenvolvi um game engine rudimentar que permite desenvolver jogos "pick your path". O projeto foi inspirado pelo jogo de 
-                        <a href=" https://www.tumblr.com/theartofmadeline/706011783916371968/lil-16-page-zine-that-i-made-at-the-coffee-shop">[theartofmadeline]</a>
-                        , para o qual desenvolvi uma versão digital. Uma versão mais recente permite adicionar imagens e utilizar uma palete de até quatro cores
-                    </p>
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=1pee24NYz7Obfdv_47l-lOuP4TPqYIWrL&sz=w600">
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=13NZg1JmzzEaasJZf6uU3CWUSDdJtL-IL&sz=w600">
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=1_ckZKU_D5krX1zDJf6tfJDX7bOlT9rcI&sz=w600">
-
-                </div>
-                <div class="peça">
-                    <h4>Flow</h4>
-                    <iframe class="youtube" src="https://www.youtube.com/embed/A2Vvn0F7U6A"></iframe>
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=1uziDFb3tgMJzvaQuoFUYJTnJNjCWY4Wi&sz=w600">
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=1edH3YMsWzTaSK8v4op1MqszsnSe_4vMy&sz=w600">
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=1wiAx1uzP4ItRs8rZISkWPf9QlixZ_bBa&sz=w600">
-                </div>
-                <div class="peça">
-                    <h4>3D Render</h4>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1Ml_csB9x72rnHWE0ISSHnIbeE4WSR5d8&sz=w600">
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=11mpHlHJnqwR0VcxsTN6lyZPOjGcPc5Oy&sz=w600">
+                        <img class="imagemW_100" src="programing/colorCube_ex.webp">
+                        <p>Desenvolvimento de uma versão do programa mais user-friendly foi iniciado após conversas com um possivel cliente. o Projeto foi abandonado após o cliente cessar comunicação.</p>
+                        <img class="imagemW_100" src="programing/colorCube1.png">
+                        <p>A aplicação poderia alterar entre o cubo RGB e um cone HSL</p>
+                        <img class="imagemW_33" src="programing/colorCube2.webp">
+                        <img class="imagemW_33" src="programing/colorCube3.webp">
+                        <img class="imagemW_33" src="programing/colorCube4.webp">      
+                    </div>
+                    <div class="peça">
+                        <h4>Solar Insolation</h4>
+                        <p>Irradiação solar é a quantidade de radiação solar por unidade de área</p>
+                        <p>Este programa simula a evolução da irradiação solar diária ao longo de um ano</p>
+                        <img class="imagemW_50" src="programing/insolation1.webp">
+                        <img class="imagemW_50" src="programing/insolation2.webp">
+                        <p>O programa tem várias configurações, como por exemplo, como seria a irradiação solar se um lado do planeta estivesse sempre virado para o sol.</p>
+                    </div>
                 </div>
             </div>
         </div>
-         <div class="subBloco">
-            <h4>OPEN FRAMEWORKS - A MÁQUINA DO MUNDO</h4>
 
-            <a href="https://openframeworks.cc">[OpenFrameworks]</a> 
-            é um toolkit Open-Source para C++ criado para ajudar no processo criativo, oferecendo um framework simples e intuitivo.
-            <div class="flexBloco">
-                <div class="peça">
-                    <h4>A Máquina do Mundo</h4>
-                    <p>A Máquina do Mundo é um gerador e simulador de mundos virtuais, onde populações evoluem de acordo com os recursos naturais presentes.</p>
-                    <img class="imagemH" src="https://drive.google.com/thumbnail?id=1EBgdwuzrqk5vLJprd0vmGuBkNdVu1jtJ&sz=w600">
-                    <iframe class="youtube_16_9" src="https://www.youtube.com/embed/0MgIB2rmJk8"></iframe>
-                    <iframe class="youtube_16_9" src="https://www.youtube.com/embed/-PMmnyM7TME"></iframe>
-                    <p>A Máquina do Mundo foi desenvolvido como Projeto Final para Licenciatura de Som e Imagem da Universidade Catolica do Porto, e encontrou-se exposta no Panorama#25</p>
-                </div>
-
-                <div class="peça">
-                    <h4>Mapa</h4>
-                    <p>O programa gera um mapa composto por informação sobre o ambiente - altitude, temperatura, humidade - e estruturas - cidades, estradas. <br> O mapa tem 192 unidades de comprimento por 160 undades de largura, com cada unidade de área a ser representada por um simbolo ASCII.</p>
-                    <p>A geração do mapa passa por várias etapas:</p>
-                    <ol>
-                        <li>Rios</li>
-                        <li>Terreno</li>
-                        <li>Temperatura</li>
-                        <li>Humidade</li>
-                        <li>Biomas</li>
-                    </ol>
-                </div>
-                <div class="peça">
-                    <h4>Graficos</h4>
-                    <p>A Máquina do Mundo combina 229 simbolos possiveis e 43 cores possiveis para gerar todos os seus conteúdos gráficos.</p>
-                    <img width="140" src="https://drive.google.com/thumbnail?id=1C3bnz1dIB0-xeXNya-l-JUpAD_-jH0h1&sz=w600">
-                    <img width="140" src="https://drive.google.com/thumbnail?id=19M6GY-lAM_85jk4EobU_1OF3K8jpKJhu&sz=w600">
-                    <p>Cada um dos simbolos é composto por pixeis pretos, cinzento escuros, cinzento claros e brancos. Estes são substituidos por qualquer combinação de quatro cores:</p>
-                    <img width="300" src="https://drive.google.com/thumbnail?id=1g9Nix9qoQMRZ9FTJh0BCGQYJQKXbO04U&sz=w600">
-                </div>
-                <div class="peça">
-                    <h4>Rios e Terreno</h4>
-                    <p>A geração de terreno começa com a geração de rios e a partir destes rios é gerado o declive do terreno.</p> 
-                    <p>1. N pontos de origem são escolhidos, e, a partir destes, N gráficos Árvore são gerados.</p>
-                    <img width="300" src="https://drive.google.com/thumbnail?id=1LISC9qJ6ZZaJzErH2j88t3Xf1UDQERCc&sz=w600">
-                    <p>2. Para cada ponto no mapa, descobre-se qual a linha dos gráficos árvore mais próxima.</p>
-                    <img width="300"src="https://drive.google.com/thumbnail?id=1h-PDm4tRXIGFaRAgEiH_ca0FbRvHtvPp&sz=w600">
-                    <p>3. A altitude para cada ponto do mapa é gerada. Os pontos de origem são considerados como o fundo de oceanos, e a altitude aumenta à medida que nos afastamos destes, garantindo um terreno onde rios avançam sempre para altitudes de menor elevação.</p>
-                    <img width="300" src="https://drive.google.com/thumbnail?id=1F-rQZtndXsShcY4nQtLRdfbcwQOS3E5p&sz=w600">
-                    <p>4. Para finalizar, qualquer ponto no mapa com altitude inferior ou superior a valores predeterminados é considerado oceano ou montanha, respetivamente:</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1tICwXsch0t83XcGgECVhHmeskSfR77IC&sz=w600">
-                </div>
-                <div class="peça">
-                    <h4>Temperatura, Humidade e Biomas</h4>
-                    <p>O programa gera um mapa de temperatura.</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1n6dPWtLRyVCm7hKPrpdOjNMCOYfke5Hi&sz=w600">
-                    <p>O programa gera um mapa de ventos a partir da altitude.</p>
-                    <p>A partir do mapa de ventos e humidade, o programa simula o transporte de humidade a partir do oceano, criando um mapa de humidade.</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1vii9CMb-y64Y7mvEiNIdOKjy8Dgthfv3&sz=w600">
-                    <p>Temperatura e Humidade são combinados para determinar biomas segundo uma versão modificada do modelo de Robert Whittaker:</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=19FDBbSygUXwM-oNTUJmCZ0Nxw6orI7s2&sz=w600">
-                </div>
-                <div class="peça">
-                    <h4>Cidades</h4>
-                </div>
-                <div class="peça">
-                    <h4>Estradas</h4>
-                    <p>A geração de estradas utiliza uma versão modificada do "Dijkstra's algorithm". Devido ao tamanho do mapa (192 x 160), o algoritmo é utilizado duas vezes.</p><p>Para uma aparencia mais natural, o algoritmo procura que a estrada mantenha sempre a mesma altitude em cada um dos seus pontos, circulando à volta de montanhas e corpos de água.</p>
-                    <p>As imagens seguintes são as etapas de teste do algoritmo, num mapa com 256x256 de tamanho. A luminoside em cada ponto representa a sua altitude.</p> 
-                    <p>A primeira etapa analiza o mapa reduzido para 32x32 (64:1). Neste teste, a área vermelha indica a área analisada e  a área amarela indica o caminho encontrado.</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1rdJyzthy7SRm_5_ZMo5O68TtHtFdZnwW&sz=w600">
-                    <p>A segunda etapa regressa ao mapa de 256x256, mas apenas analisa o caminho descoberto na etapa anterior. A área verde indica a área analisada na segunda etapa e a área azul representa o caminho encontrado</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1EZDq0sq1Y8jcO6ITqAmmlpdWdMer4-8z&sz=w600">
-
-                </div>
-                <div class="peça">
-                    <h4>Estrutura Fisica</h4>
-                    <p>
-                        A estrutura fisica da Máquina do Mundo é composta pelos seus elementos tecnicos: 
-                        um monitor e um computador - incluido teclado e rato - e uma estrutura de madeira para os suportar. 
-                        Esta estrutura foi planeada e construida de acordo com o material disponibilizado pela universidade. 
-                    </p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1MIUVxSNDwatnC52rWxGUXl7xoAGFUnM0&sz=w600">
-                    <p>De forma a invocar mapas numa mesa, o monitor encontra-se horizontal.</p>
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=17TAxqzbp7s8aiXV0i_aC4xga-wUEDlhp&sz=w600">
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1ze4D8-Z5xNQVDEoRBvwfdO_bylJgKtbq&sz=w600">
-                    <img class="imagemW" src="https://drive.google.com/thumbnail?id=1b4gRxxQwNQKbfF1LcvbcrQFHSl2WtD2a&sz=w600">
-                </div>
-                
+        <div class="bloco" id="about">
+            <div class="subBloco">
+                <h2>sobre mim</h2>
+              	<p>O meu <a href="CV.pdf" download = "CV_HugoAlmeida.pdf"> CV </a></p> 
+              
+              	<p>programas que eu uso:</p>
+              	<ul>
+									<li>Desenho e Animação: Krita e Photoshop</li>
+  								<li>Edição de Video: Davinci Resolve</li>
+                  <li>programação: C++, Open Frameworks e ProcessingMilk</li>
+								</ul>
             </div>
         </div>
-    </div>
+    		
+      	<div style="padding-bottom: 100px;"></div>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
